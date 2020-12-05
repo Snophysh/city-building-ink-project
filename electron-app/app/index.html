@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gingera</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1 id="game-title">Gingera</h1>
+    </header>
+    <aside>
+      <div class="navigation-title-container">
+        <h2 class="navigation-title">Buildings</h2>
+      </div>
+      <div id="buildings"></div>
+      <div class="navigation-title-container">
+        <h2 class="navigation-title">Locations</h2>
+      </div>
+      <div id="locations"></div>
+    </aside>
+    <main>
+      <section id="story-panel"></section>
+      <section id="choices"></section>
+    </main>
+    <script>
+      window.$ = window.jQuery = require("jquery");
+    </script>
+    <script src="theCity.js"></script>
+  </body>
+</html>

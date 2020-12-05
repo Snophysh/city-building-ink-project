@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 20vw 80vw;
+  grid-template-rows: 7vh 1fr;
+  grid-template-areas:
+    "header header"
+    "aside main";
+}
+
+header {
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  background-color: #333333;
+  color: whitesmoke;
+}
+
+aside {
+  grid-area: aside;
+  background-color: #999999;
+  height: calc(100vh - 7vh);
+  border-right: 2px solid black;
+}
+
+main {
+  grid-area: main;
+  background-color: lightgray;
+
+  display: grid;
+  grid-template-rows: 80% 20%;
+  grid-template-areas:
+    "story-panel"
+    "choices";
+}
+
+footer {
+  grid-area: footer;
+}
+
+#game-title {
+  font-size: 1.125rem;
+  margin-left: 20px;
+}
+
+#locations,
+#buildings {
+  min-height: 200px;
+  padding: 10px;
+}
+
+#story-panel {
+  grid-area: story-panel;
+  padding: 0 5vw;
+  width: 80%;
+  font-family: sans-serif;
+  background-color: #f6f0e8;
+  margin: 0 auto;
+}
+
+#choices {
+  grid-area: choices;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top: 2px solid black;
+}
+
+.story-paragraphs {
+    max-width: 60ch;
+}
+
+.locations-and-buildings {
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  background-color: white;
+  border: 2px solid black;
+  margin-bottom: 10px;
+}
+
+.locations-and-buildings:hover {
+  background-color: grey;
+  color: white;
+}
+
+.choice {
+  width: 50%;
+  padding: 10px;
+  background-color: white;
+  border: 2px solid black;
+  margin: 0 10px;
+}
+
+.choice:hover {
+  background-color: grey;
+  color: white;
+}
+
+.navigation-title-container {
+  background-color: #555555;
+  color: whitesmoke;
+  padding: 10px 0;
+  width: 100%;
+}
+
+.navigation-title {
+  font-size: 1rem;
+  text-align: center;
+}
