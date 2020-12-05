@@ -1,3 +1,30 @@
+INCLUDE buildings/LionSmithy.ink
+INCLUDE buildings/RoyalSmithy.ink
+INCLUDE buildings/LeaningTankard.ink
+INCLUDE buildings/GrandCathedral.ink
+INCLUDE buildings/TheAcademy.ink
+INCLUDE buildings/HealersHouse.ink
+INCLUDE buildings/Apothecary.ink
+INCLUDE buildings/LordsManor.ink
+INCLUDE buildings/KnightsGuild.ink
+INCLUDE buildings/LionsTavern.ink
+INCLUDE buildings/MarketStrip.ink
+INCLUDE buildings/LionsTheater.ink
+INCLUDE buildings/RoyalGardens.ink
+INCLUDE buildings/LionsInn.ink
+INCLUDE locations/IndustrialDistrict.ink
+INCLUDE locations/ReligiousDistrict.ink
+INCLUDE locations/TownCenter.ink
+INCLUDE locations/MarketAndArtsDictrict.ink
+INCLUDE locations/ResidentialDistrict.ink
+
+
+
+
+
+
+LIST CurrentLocation = industrial, religious, arts, residents, center
+
 <em>The City of Gingera</em>
 
 // Introduction
@@ -12,74 +39,23 @@ You enter the west gate.
 
 ->->
 
-=== IndustrialDistrict ===
-
-You have entered the Industrial District
-
-<- buildings
-<- Locations
-
-= buildings
-
-+ [Royal Smithy]
-+ [The Leaning Tankard]
-+ [Lion's Smithy]
-
-=== ReligiousDistrict ===
-
-You have entered the Religious District
-
-<- buildings
-<- Locations
-
-= buildings
-
-+ [Grand Cathedral]
-+ [The Academy]
-+ [Healers House]
-+ [Apothecary]
-
-=== TownCenter ===
-
-You have entered the Town Center
-
-<- buildings
-<- Locations
-
-= buildings
-
-+ [The Lord's Manor]
-+ [Knights Guild]
-+ [Lion's Tavern]
-
-=== MarketAndArtsDistrict ===
-
-You have entered the Market & Arts District
-
-<- buildings
-<- Locations
-
-= buildings
-
-+ [Market Strip]
-+ [Lion's Theater]
-+ [Royal Gardens]
-+ [Lion's Inn]
-
-=== ResidentialDistrict ===
-
-You have entered the Residential District
-
-<- Locations
-
 
 === Locations ===
 
-+ {not came_from(-> ReligiousDistrict) and not came_from(-> ResidentialDistrict)}[Religious District] -> ReligiousDistrict
-+ {not came_from(-> IndustrialDistrict) and not came_from(-> MarketAndArtsDistrict)}[Industrial District] -> IndustrialDistrict
-+ {not came_from(-> TownCenter)}[Town Center] -> TownCenter
-+ {not came_from(-> IndustrialDistrict) and not came_from(-> MarketAndArtsDistrict)}[Market & Arts District] -> MarketAndArtsDistrict
-+ {not came_from(-> ReligiousDistrict) and not came_from(-> ResidentialDistrict)}[Residential District] -> ResidentialDistrict
++ {CurrentLocation != religious and CurrentLocation != religious}[Religious District] -> ReligiousDistrict
++ {CurrentLocation != industrial and CurrentLocation != arts}[Industrial District] -> IndustrialDistrict
++ {CurrentLocation != center}[Town Center] -> TownCenter
++ {CurrentLocation != industrial and CurrentLocation != arts}[Market & Arts District] -> MarketAndArtsDistrict
++ {CurrentLocation != religious and CurrentLocation != residents}[Residential District] -> ResidentialDistrict
++ {CurrentLocation == industrial}[West Gate] 
+    Are you sure you want to leave the city?
+    ** [Yes.] -> END
+    ** [No.] -> IndustrialDistrict
+
+
+= inside
+
++ [Exit.] ->->
 
 // Game Functions
 

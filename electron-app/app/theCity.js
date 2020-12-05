@@ -8,7 +8,7 @@ const inkFile = fs.readFileSync(`${__dirname}/theCityStory.json`, 'UTF-8').repla
 const story = new Story(inkFile);
 
 const buildings = ['Royal Smithy', 'The Leaning Tankard', 'Lion\'s Smithy', 'Grand Cathedral', 'The Academy', 'Healers House', 'Apothecary', 'Lord\'s Manor', 'Knights Guild', 'Lion\'s Tavern', 'Market Strip', 'Lion\'s Theater', 'Royal Gardens', 'Lion\'s Inn']
-const locations = ['Religious District', 'Industrial District', 'Market & Arts District', 'Town Center', 'Residential District']
+const locations = ['Religious District', 'Industrial District', 'Market & Arts District', 'Town Center', 'Residential District', 'West Gate']
 
 continueToNextChoice();
 

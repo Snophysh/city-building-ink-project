@@ -42,9 +42,10 @@ main {
 
   display: grid;
   grid-template-rows: 75% 25%;
+  grid-template-columns: 75% 25%;
   grid-template-areas:
-    "story-panel"
-    "choices";
+    "story-panel options-panel"
+    "choices choices";
 }
 
 footer {
@@ -69,6 +70,10 @@ footer {
   font-family: sans-serif;
   background-color: #f6f0e8;
   margin: 0 auto;
+}
+
+#options-panel {
+    grid-area: options-panel;
 }
 
 #choices {
