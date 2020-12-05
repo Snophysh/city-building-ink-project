@@ -18,11 +18,6 @@ INCLUDE locations/TownCenter.ink
 INCLUDE locations/MarketAndArtsDictrict.ink
 INCLUDE locations/ResidentialDistrict.ink
 
-
-
-
-
-
 LIST CurrentLocation = industrial, religious, arts, residents, center
 
 <em>The City of Gingera</em>
@@ -42,7 +37,7 @@ You enter the west gate.
 
 === Locations ===
 
-+ {CurrentLocation != religious and CurrentLocation != religious}[Religious District] -> ReligiousDistrict
++ {CurrentLocation != religious and CurrentLocation != residents}[Religious District] -> ReligiousDistrict
 + {CurrentLocation != industrial and CurrentLocation != arts}[Industrial District] -> IndustrialDistrict
 + {CurrentLocation != center}[Town Center] -> TownCenter
 + {CurrentLocation != industrial and CurrentLocation != arts}[Market & Arts District] -> MarketAndArtsDistrict
