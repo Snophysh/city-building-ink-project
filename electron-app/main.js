@@ -12,6 +12,8 @@ function createWindow () {
 
   win.loadURL(`file://${__dirname}/app/index.html`);
 
+  win.maximize()
+
   win.once('ready-to-show', () => {
     win.show();
   });

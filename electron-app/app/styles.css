@@ -41,7 +41,7 @@ main {
   background-color: lightgray;
 
   display: grid;
-  grid-template-rows: 80% 20%;
+  grid-template-rows: 75% 25%;
   grid-template-areas:
     "story-panel"
     "choices";
@@ -103,7 +103,7 @@ footer {
   padding: 10px;
   background-color: white;
   border: 2px solid black;
-  margin: 0 10px;
+  margin-bottom: 5px;
 }
 
 .choice:hover {
