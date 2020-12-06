@@ -17,23 +17,24 @@ INCLUDE locations/ReligiousDistrict.ink
 INCLUDE locations/TownCenter.ink
 INCLUDE locations/MarketAndArtsDictrict.ink
 INCLUDE locations/ResidentialDistrict.ink
+INCLUDE locations/WestGate.ink
+
+
+VAR playerName = "Kai"
+VAR silverCoins = 20
 
 LIST CurrentLocation = industrial, religious, arts, residents, center
+LIST playerCharacterFlags = novicePoet, masterPoet
+LIST souveniers = gingeraTunic
+LIST Task = pickUpApothecaryBook
 
 <em>The City of Gingera</em>
 
 // Introduction
 
-You arrive at the city.
+You are an apprentice to a herbalist from a small town nearby. Your mentor, Ria, has sent you to pick up some supplies and an important book from Gingera's local Apothecary. This is your first time visitng the city and while you are here on business you can't wait to explore what this town has to offer.
 
 * [Enter City] -> WestGate -> IndustrialDistrict
-
-=== WestGate ===
-
-You enter the west gate.
-
-->->
-
 
 === Locations ===
 

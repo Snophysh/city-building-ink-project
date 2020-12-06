@@ -19,7 +19,7 @@ button {
 body {
   display: grid;
   grid-template-columns: 20vw 80vw;
-  grid-template-rows: 7vh 1fr;
+  grid-template-rows: 7vh 93vh;
   grid-template-areas:
     "header header"
     "aside main";
@@ -74,6 +74,7 @@ footer {
   font-family: sans-serif;
   background-color: #f6f0e8;
   margin: 0 auto;
+  overflow-y: auto;
 }
 
 #options-panel {

@@ -30,11 +30,12 @@ const inkFile = fs.readFileSync(`${__dirname}/theCityStory.json`, 'UTF-8').repla
 //create a new story
 const story = new Story(inkFile);
 
-const buildings = ['Royal Smithy', 'The Leaning Tankard', 'Lion\'s Smithy', 'Grand Cathedral', 'The Academy', 'Healers House', 'Apothecary', 'Lord\'s Manor', 'Knights Guild', 'Lion\'s Tavern', 'Market Strip', 'Lion\'s Theater', 'Royal Gardens', 'Lion\'s Inn']
-const locations = ['Religious District', 'Industrial District', 'Market & Arts District', 'Town Center', 'Residential District', 'West Gate']
+const buildings = ['Royal Smithy', 'The Leaning Tankard', 'Lion\'s Smithy', 'Grand Cathedral', 'The Academy', 'Healers House', 'Apothecary', 'Lord\'s Manor', 'Knights Guild', 'Lion\'s Tavern', 'Market Strip', 'Lion\'s Theater', 'Royal Gardens', 'Lion\'s Inn'];
+const locations = ['Religious District', 'Industrial District', 'Market & Arts District', 'Town Center', 'Residential District', 'West Gate'];
+const memories = ['novicePoet', 'masterPoet'];
 
 //Observer Functions
-story.ObserveVariable("CurrentLocation", function (variableName, variableValue) {
+story.ObserveVariable("playerCharacterFlags", function (variableName, variableValue) {
 	let currentValue = variableValue.keys().next().value;
 	currentValue = JSON.parse(currentValue).itemName;
 	console.log(currentValue);
@@ -48,6 +49,7 @@ function continueToNextChoice() {
 
 	//Clear screen before we can add new content
 	$('#story-panel').empty();
+	$('#location-description').empty();
 	$('#locations').empty();
 	$('#buildings').empty()
 	$('#choices').empty()
