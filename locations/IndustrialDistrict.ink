@@ -1,5 +1,5 @@
 === IndustrialDistrict ===
-
+# LOCATION: Industrial District
 ~ CurrentLocation = industrial
 
 The smell of burning coal and smelted steel fill the air as plumes of dark smoke leave a dark haze. Two smithys stand across from each other, the sound of pounding steel echoing across the streets. A tavern sits on the far end of the street.

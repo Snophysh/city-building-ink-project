@@ -1,5 +1,5 @@
 === ReligiousDistrict ===
-
+# LOCATION: Religious District
 ~ CurrentLocation = religious
 
 The cathedral stands a focal point at the districts center. 

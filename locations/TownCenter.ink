@@ -1,5 +1,5 @@
 === TownCenter ===
-
+# LOCATION: Town Center
 ~ CurrentLocation = center
 
 You have entered the Town Center

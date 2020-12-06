@@ -1,5 +1,5 @@
 === MarketAndArtsDistrict ===
-
+# LOCATION: Market and Arts District
 ~ CurrentLocation = arts
 
 You have entered the Market & Arts District
