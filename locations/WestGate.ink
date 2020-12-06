@@ -48,7 +48,7 @@ You {souveniers == gingeraTunic: thank her and |}introduce yourself.
         
         "Honestly? I'm not quite sure, but rumor has it that a brick layer had bought some tumeric to take home after work. By pure happenstance she accidently dumped the tumeric in her brick mix. Not wanting to start again she simply laid the bricks with tumeric, which gave them a vibrant orange hue. The current Lord at the time, Lord Mara, saw this and was so enamored, she ordered the whole wall to be done this way."
         
-        The guard pauses again and looks at the gate. She turns back to you. "Not sure if that's true but its what my Grandma used to tell me." She smiles, her brown eyes sparkle. "Could never tell if she was being sincere or lying out her ass," she says. 
+        The guard pauses again and looks at the gate. She turns back to you. "Not sure if that's true but its what my Grandma used to tell me." She smiles, her brown eyes sparkling. "Could never tell if she was being sincere or lying out her ass," she says. 
         
     ** (askGuardArts)[Ask about the Arts District]
         "What should I make sure to see in the Arts District?" you ask. The guard stops and thinks before answering.
@@ -74,7 +74,8 @@ You {souveniers == gingeraTunic: thank her and |}introduce yourself.
         { not just_curious: "Well, well! You should really stop by, I'm sure they'd love to have you!" she says.}
         <> She folds her arms and leans back. "Well, lets see. It happens most evenings. It's pretty casual so you can really read whatever. Don't worry about it being perfect. Its really just about sharing words with others."
         
-    ** [Ask about a different topic.] -> optsGuard
+    ** {not askAboutMerchant}[Ask about a different topic.] -> optsGuard
+    ** {askAboutMerchant} [Thats all the questions you had.] -> goodbye
     -- (guard1)
         {
             - optsGuard2 == 1:
@@ -86,10 +87,10 @@ You {souveniers == gingeraTunic: thank her and |}introduce yourself.
                ** [Head back to gate entrance.]  -> WestGate
         }
         -> DONE
-* [Ask about the merchant.]
+* (askAboutMerchant)[Ask about the merchant.]
     "About that merchant you were talking with earlier—" you begin.
     
-    "Oh, that one," she interrupts, "He comes here regularly with some new <em>experience</em> to sell. Most of it I find a bit, disengenous if you ask me. Last time he came here selling purple banana's. No taste difference. They were just purple," she says and rubs her temples in fustration. "But, he's really popular," she sighs. "I'll never understand." 
+    "Oh, that one," she interrupts, "He comes here regularly with some new <em>experience</em> to sell. Most of it I find a bit, disengenous if you ask me. Last time he came here selling purple bananas. No taste difference. They were just purple," she says and rubs her temples in fustration. "But, he's really popular," she sighs. "I'll never understand." 
     
     {
         - optsGuard2 > 1: 
@@ -101,6 +102,7 @@ You {souveniers == gingeraTunic: thank her and |}introduce yourself.
     
     -> optsGuard
 * [{Nevermind.|See ya later.}]
+- (goodbye)
     {optsGuard == 1: "Ah sorry, was just saying hi!" you say. The guard smiles and nods.| "Gotta go, but thanks for the information," you say.}
     
     "Well met {playerName}, enjoy your visit to Gingera," she says and goes back to managing her post.
