@@ -12,6 +12,10 @@ h6 {
   margin: 0;
 }
 
+button {
+  cursor: pointer;
+}
+
 body {
   display: grid;
   grid-template-columns: 20vw 80vw;
@@ -42,7 +46,7 @@ main {
 
   display: grid;
   grid-template-rows: 75% 25%;
-  grid-template-columns: 75% 25%;
+  grid-template-columns: 70% 30%;
   grid-template-areas:
     "story-panel options-panel"
     "choices choices";
@@ -66,14 +70,56 @@ footer {
 #story-panel {
   grid-area: story-panel;
   padding: 0 5vw;
-  width: 80%;
+  width: 100%;
   font-family: sans-serif;
   background-color: #f6f0e8;
   margin: 0 auto;
 }
 
 #options-panel {
-    grid-area: options-panel;
+  grid-area: options-panel;
+
+  display: grid;
+  grid-template-rows: 8% 72% 20%;
+  grid-template-areas:
+    "current-location-title"
+    "location-description"
+    "option-buttons";
+}
+
+#current-location-title {
+  grid-area: current-location-title;
+  text-align: center;
+  font-size: 1.1rem;
+  padding-top: 5px;
+  font-family: sans-serif;
+  background-color: white;
+  border-bottom: 2px solid;
+}
+
+#location-description {
+  grid-area: location-description;
+  padding: 0 10px;
+}
+
+#option-buttons {
+  grid-area: option-buttons;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.option-button {
+  display: block;
+  padding: 5px 0;
+  border: 2px solid black;
+  background-color: white;
+}
+
+.option-button:hover {
+  background-color: grey;
+  color: white;
 }
 
 #choices {
@@ -86,7 +132,7 @@ footer {
 }
 
 .story-paragraphs {
-    max-width: 60ch;
+  max-width: 60ch;
 }
 
 .locations-and-buildings {

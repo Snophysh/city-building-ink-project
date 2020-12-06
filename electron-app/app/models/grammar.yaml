@@ -1,0 +1,32 @@
+root:
+  groups:
+    -
+      tags: []
+      phrases:
+        - "The [:prefix] [:name] is a [:class] commissioned in [#1880-1910]."
+prefix:
+  groups:
+    -
+      tags: []
+      phrases:
+        - "HMS"
+name:
+  groups:
+    -
+      tags: []
+      phrases:
+        - "Invincible"
+        - "Unstoppable"
+        - "Indefatigable"
+        - "Inevitable"
+        - "Inerrant"
+class:
+  groups:
+    -
+      tags: []
+      phrases:
+        - "cutter"
+        - "torpedo boat"
+        - "light cruiser"
+        - "heavy cruiser"
+        - "battleship"
