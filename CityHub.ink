@@ -24,9 +24,9 @@ VAR playerName = "Kai"
 VAR silverCoins = 20
 
 LIST CurrentLocation = industrial, religious, arts, residents, center
-LIST playerCharacterFlags = novicePoet, masterPoet
-LIST souveniers = gingeraTunic
-LIST Task = pickUpApothecaryBook
+LIST PlayerCharacterFlags = novicePoet, masterPoet
+LIST Souvenirs = gingeraTunic
+LIST Tasks = pickUpApothecaryBook
 
 <em>The City of Gingera</em>
 

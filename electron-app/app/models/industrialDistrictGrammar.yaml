@@ -1,0 +1,47 @@
+root:
+  groups:
+    -
+      tags: []
+      phrases:
+        - "A person dressed in [:attire] attire is having a [:adjective] conversation with a [:profession]."
+attire:
+  groups:
+    -
+      tags: []
+      phrases:
+        - "royal"
+        - "colorful"
+        - "vibrant"
+        - "regal"
+        - "dark"
+        - "all blue"
+        - "fancy"
+        - "plain"
+        - "disheveled"
+        - "fashionable"
+        - "all black"
+profession:
+  groups:
+    -
+      tags: []
+      phrases:
+        - "monk"
+        - "knight"
+        - "lady"
+        - "lad"
+        - "noble"
+        - "miner"
+        - "blacksmith"
+adjective:
+  groups:
+    -
+      tags: []
+      phrases:
+        - "lively"
+        - "private"
+        - "loud"
+        - "humorous"
+        - "heated"
+        - "jovial"
+        - "interesting"
+        - "fascinating"

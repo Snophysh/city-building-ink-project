@@ -8,7 +8,7 @@ const fs = require("fs");
  */
 
 // Load our data from a file
-const grammarData = yaml.load(fs.readFileSync(`${__dirname}/models/grammar.yaml`));
+const grammarData = yaml.load(fs.readFileSync(`${__dirname}/models/industrialDistrictGrammar.yaml`));
 
 // Create a generator object from this data
 const generator = new Improv(grammarData, {
@@ -17,7 +17,7 @@ const generator = new Improv(grammarData, {
 });
 
 // Generate text and print it out
-console.log(generator.gen('root', {}));
+
 
 
 /**
@@ -35,11 +35,13 @@ const locations = ['Religious District', 'Industrial District', 'Market & Arts D
 const memories = ['novicePoet', 'masterPoet'];
 
 //Observer Functions
-story.ObserveVariable("playerCharacterFlags", function (variableName, variableValue) {
+story.ObserveVariable("PlayerCharacterFlags", function (variableName, variableValue) {
 	let currentValue = variableValue.keys().next().value;
 	currentValue = JSON.parse(currentValue).itemName;
 	console.log(currentValue);
 });
+
+
 
 continueToNextChoice();
 
@@ -110,10 +112,18 @@ function processTags(tags) {
 			switch (keyPair[0]) {
 				case 'LOCATION':
 				  $('#current-location-title').text(keyPair[1]);
+				  generatedDescriptiveText(keyPair[1]);
 				  break;
 				default:
-				  console.log(`Sorry, ${keyPair[0]} was not found.`);
+				  console.log(`Sorry, ${keyPair[1]} was not found.`);
 			  }
 		}
 	})
+}
+
+function generatedDescriptiveText(location) {
+	if(location.trim() === locations[1]) {
+		let generatedDescriptiveText = generator.gen('root', {});
+		$('#story-panel').append(`<p class="story-paragraphs">${generatedDescriptiveText}</p>`)
+	}
 }

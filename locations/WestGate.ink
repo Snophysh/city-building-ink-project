@@ -13,11 +13,12 @@ The gate stands tall, made of vibrant orange bricks. The bustle of travelers a c
 
 * [Talk to Guard.] -> talkToGuard ->
 * [Examine Booth.] -> examineBooth ->
-* [Pass throught the gate.] 
+* [Pass through the gate.] 
 
 - ->->
 
 = talkToGuard
+
 As you approach the guard you notice them engrossed in a conversation with a merchant. You catch snippets of the conversation as you wait for them to finish in the bustle of travelers coming through. 
 
 "No no, it's true. These apples really do taste like oranges," the merchant says. The guard frowns, staring at the merchant and their cart full of apples.
@@ -30,9 +31,9 @@ As you approach the guard you notice them engrossed in a conversation with a mer
 
 "You won't be dissapointed! Truly you have brought wonder to your town," the merchant says. The guard waves him off and the merchant heads into the city. The guard then notices you standing in the crowd and smiles as they wave you closer.
 
-"Well met traveler! The name is Leora. How can I help you?" the guard asks{souveniers == gingeraTunic:, then she points at your tunic. "I see you got one! I really like the design this year. Looks good on you," she says. <>|.}
+"Well met traveler! The name is Leora. How can I help you?" the guard asks{Souvenirs == gingeraTunic:, then she points at your tunic. "I see you got one! I really like the design this year. Looks good on you," she says. <>|.}
 
-You {souveniers == gingeraTunic: thank her and |}introduce yourself.
+You {Souvenirs == gingeraTunic: thank her and |}introduce yourself.
 
 - (optsGuard)
 
@@ -65,10 +66,10 @@ You {souveniers == gingeraTunic: thank her and |}introduce yourself.
             
             "Thats how it starts," she says with a wink.
         *** [Yes, but your just starting out.]
-            ~ playerCharacterFlags = novicePoet
+            ~ PlayerCharacterFlags = novicePoet
             "I would say more novice poet but, yes, I am," you say.
         *** [Yes, and your quite accomplished.]
-            ~ playerCharacterFlags = masterPoet
+            ~ PlayerCharacterFlags = masterPoet
             "Yes I am," you say. The guards eyes go wide.
         --- 
         { not just_curious: "Well, well! You should really stop by, I'm sure they'd love to have you!" she says.}
@@ -97,7 +98,7 @@ You {souveniers == gingeraTunic: thank her and |}introduce yourself.
             -> guard1
         
         - else: 
-        A noise catches her attention and she looks at the gate. Satisfied it isn't anything worrying she turns back to you, "Was there anything else?"
+        A noise catches her attention and she looks at the gate. Once satisfied it isn't anything worrying she turns back to you, "Was there anything else?"
     }
     
     -> optsGuard
@@ -120,7 +121,7 @@ You examine your coin bag and count {silverCoins} silver coins. Five is slightly
 - (optsBooth)
 * [Buy tunic.]
     ~ silverCoins -= 5
-    ~ souveniers += gingeraTunic
+    ~ Souvenirs += gingeraTunic
     You push through and ask for your size. You pay the seller and they hand you your Gingera tunic.
     
     "The best purchase you'll make your entire stay," the seller says. You nod and walk away from the booth. You slip on the tunic, the fabric soft on your skin.
