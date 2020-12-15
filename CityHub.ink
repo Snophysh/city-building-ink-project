@@ -3,7 +3,6 @@ INCLUDE buildings/RoyalSmithy.ink
 INCLUDE buildings/LeaningTankard.ink
 INCLUDE buildings/GrandCathedral.ink
 INCLUDE buildings/TheAcademy.ink
-INCLUDE buildings/HealersHouse.ink
 INCLUDE buildings/Apothecary.ink
 INCLUDE buildings/LordsManor.ink
 INCLUDE buildings/KnightsGuild.ink
